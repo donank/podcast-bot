@@ -1,0 +1,30 @@
+{
+  "name": "podcast-bot",
+  "version": "1.0.0",
+  "description": "A podcast bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donank/podcast-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "podcast",
+    "bot"
+  ],
+  "author": "donank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donank/podcast-bot/issues"
+  },
+  "homepage": "https://github.com/donank/podcast-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.0",
+    "ffmpeg-binaries": "^4.0.0",
+    "opusscript": "0.0.6",
+    "ytdl-core": "^0.29.1"
+  }
+}
