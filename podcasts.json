@@ -1,7 +1,8 @@
 {
     "podcasts": [
         {
-            "politics": [
+            "name": "politics",
+            "podcasts": [
                 {
                     "name": "Benedict Anderson: Imagined Communities",
                     "link": "https://youtu.be/dDjwWFCE1V4"
@@ -10,39 +11,52 @@
                     "name": "(Gantantra) West Bengal: Polarization and Mobilization (feat Shoaib Daniyal)",
                     "link": "https://hwcdn.libsyn.com/p/0/a/2/0a2ccded9569b3ed/E13Ganatantra.mp3?c_id=41600807&cs_id=41600807&expiration=1557754161&hwt=2932f82a471bc405d08f330b4bd34a0a"
                 }
-            ]
+            ],
+            "description": "Placeholder"
         },
         {
-            "economics": [
+            "name": "economics",
+            "podcasts": [
                 {
                     "name": "Thomas Sowell: Basic Economics",
                     "link": "https://www.youtube.com/watch?v=bOMksnSaAJ4"
+                },
+                {
+                    "name": "attack on titan",
+                    "link": "https://www.youtube.com/watch?v=3v_561hRxs4"
                 }
-            ]
+            ],
+            "description": "Placeholder"
         },
         {
-            "policy": [
+            "name": "policy",
+            "podcasts": [
                 {
                     "name": "Policy Watch: One Nation - One Driving license",
                     "link": "https://www.youtube.com/watch?v=LnltB1b37lY"
                 }
-            ]
+            ],
+            "description": "Placeholder"
         },
         {
-            "law": [
+            "name": "law",
+            "podcasts": [
                 {
                     "name": "Criminal court process",
                     "link": "https://www.youtube.com/watch?v=OUZTEEdqujU"
                 }
-            ]
+            ],
+            "description": "Placeholder"
         },
         {
-            "history": [
+            "name": "history",
+            "podcasts": [
                 {
                     "name": "Benedict Anderson: Imagined Communities",
                     "link": "https://youtu.be/dDjwWFCE1V4"
                 }
-            ]
+            ],
+            "description": "Placeholder"
         }
     ]
 }
