@@ -33,7 +33,7 @@ var choice = 1
 var topic
 var sol = 0;
 var quizStarted = false;
-
+var scores = []
 client.on('message', message => {
     console.log("triggered")
     if (!message.guild) return;
@@ -145,56 +145,67 @@ client.on('message', message => {
         }
     }
 
-    var starLogicQuizCommand = `${prefix}logicstart`;
-    if (message.content.startsWith(starLogicQuizCommand)){
+    var starLogicQuizCommand = `${prefix}logic`;
+    var channel
+    if (message.content.startsWith(starLogicQuizCommand)) {
         console.log("logic quiz triggered")
-        quizStarted = true
-        channelId = message.channelId
-        selectQuestion(message);
-    }
-    if(message.content.startsWith("1") || message.content.startsWith("2") || message.content.startsWith("3") || message.content.startsWith("4")){
-        console.log("answer triggered")
-        if(quizStarted){
-                if(parseInt(message.content) == sol){
-                    message.channel.send("Correct Answer")
-                    selectQuestion(message);
-                }else{
-                    message.channel.send("Wrong Answer")
-                    selectQuestion(message);
-                }
-            }  
+        const args = message.content.slice(starLogicQuizCommand.length).split();
+        const command = args.shift().trim();
+        console.log(command)
+        if (command == "start") {
+            channel = message.channelId
+            quizStarted = true
+            selectQuestion(message);
+        }
+        if (command == "stop" && channel == message.channelId) {
+                quizStarted = false
+                message.channel.send("Quiz Over")
+        }
     }
 
-    var stopLogicQuizCommand = `${prefix}logicstop`;
-    if(message.content.startsWith(stopLogicQuizCommand)){
-        quizStarted = false
-        message.channel.send("Quiz Over")
+    if (message.content.startsWith("1") || message.content.startsWith("2") || message.content.startsWith("3") || message.content.startsWith("4")) {
+        console.log("answer triggered")
+
+        if (quizStarted && channel == message.channelId) {
+            if (parseInt(message.content) == sol) {
+                message.channel.send("Correct Answer")
+                selectQuestion(message);
+            } else {
+                message.channel.send("Wrong Answer")
+                selectQuestion(message);
+            }
+        }
     }
-    
+
+    var fallaciesCommand = `${prefix}fallacies`
+    if (message.content.startsWith(fallaciesCommand)) {
+
+    }
+
 });
 var rand = 0
 var prevRand = 0
-function selectQuestion(message){
-        shuffle();
-        console.log("rand: " + rand);
-        sol = larguments[rand].sol;
-        console.log('sol:' + sol)
-        const quizEmbed = {
-            color: 0x8700a2,
-            title: larguments[rand].argument,
-            description: `
+function selectQuestion(message) {
+    shuffle();
+    console.log("rand: " + rand);
+    sol = larguments[rand].sol;
+    console.log('sol:' + sol)
+    const quizEmbed = {
+        color: 0x8700a2,
+        title: larguments[rand].argument,
+        description: `
             1. ${larguments[rand].opt1}
             2. ${larguments[rand].opt2}
             3. ${larguments[rand].opt3}
             4. ${larguments[rand].opt4}
         `,
-        };
-        message.channel.send({ embed: quizEmbed });
+    };
+    message.channel.send({ embed: quizEmbed });
 }
-shuffle = () =>{
+shuffle = () => {
     prevRand = rand
-    rand =  Math.floor(Math.random() * Math.floor(larguments.length));
-    if(rand == prevRand){
+    rand = Math.floor(Math.random() * Math.floor(larguments.length));
+    if (rand == prevRand) {
         console.log("Same Question! Reshuffling")
         shuffle()
     }
