@@ -145,7 +145,7 @@ client.on('message', message => {
         }
     }
 
-    var starLogicQuizCommand = `${prefix}logic`;
+    var starLogicQuizCommand = `${prefix}logix`;
     var channel
     if (message.content.startsWith(starLogicQuizCommand)) {
         console.log("logic quiz triggered")
@@ -158,8 +158,8 @@ client.on('message', message => {
             selectQuestion(message);
         }
         if (command == "stop" && channel == message.channelId) {
-                quizStarted = false
-                message.channel.send("Quiz Over")
+            quizStarted = false
+            message.channel.send("Quiz Over")
         }
     }
 
@@ -177,9 +177,34 @@ client.on('message', message => {
         }
     }
 
-    var fallaciesCommand = `${prefix}fallacies`
-    if (message.content.startsWith(fallaciesCommand)) {
+    var fallacyCommand = `${prefix}fallacytypes`
+    if (message.content.startsWith(fallacyCommand)) {
+        console.log("fallacy types command triggered");
+        var fallaciesEmbed = {
+            color: 0x8700a2,
+            title: "Fallacy Types",
+            description: fallacies.map(f => parseInt(f.index) + f.name).join('\n')
+        }
+        message.channel.send({ embed: fallaciesEmbed })
 
+    }
+
+    var fallaciesCommand = `${prefix}fallacies`
+    if(message.content.startsWith(fallaciesCommand)) {
+        console.log("fallacies command triggered")
+        var fallaciesMap
+        var i = 0
+        while(i < fallacies.length){
+            fallaciesMap = fallaciesMap + fallacies[i].fallacies.map((f, index) => "- " + f.name).join(`\n\n`)
+            i = i + 1
+        }
+        console.log(fallaciesMap)
+        var fallaciesEmbed = {
+            color: 0x8700a2,
+            title: "Fallacies",
+            description: fallaciesMap
+        }
+        message.channel.send({ embed: fallaciesEmbed })
     }
 
 });
@@ -194,6 +219,7 @@ function selectQuestion(message) {
         color: 0x8700a2,
         title: larguments[rand].argument,
         description: `
+            *Choose*
             1. ${larguments[rand].opt1}
             2. ${larguments[rand].opt2}
             3. ${larguments[rand].opt3}

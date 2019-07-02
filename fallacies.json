@@ -1,85 +1,160 @@
 {
-    "fallacies" : [
+    "fallacies": [
         {
-            "fallaciesOfRelevance":{
-                "name":"Fallacies of Relevance",
-                "description":"The fallacies of relevance clearly fail to provide adequate reason for believing the truth of their conclusions. Although they are often used in attempts to persuade people by non-logical means, only the unwary, the predisposed, and the gullible are apt to be fooled by their illegitimate appeals. Many of them were identified by medieval and renaissance logicians, whose Latin names for them have passed into common use.",
-                "fallacies":[
-                    {
-                        "name":"Appeal to Force",
-                        "description": "In the appeal to force, someone in a position of power threatens to bring down unfortunate consequences upon anyone who dares to disagree with a proffered proposition.",
-                        "example": "If you do not agree with my political opinions, you will receive a grade of F for this course."
-                    },
-                    {
-                        "name":"Appeal to Pity",
-                        "description": "An appeal to pity tries to win acceptance by pointing out the unfortunate consequences that will otherwise fall upon the speaker and others, for whom we would then feel sorry.",
-                        "example": "I am a single parent, solely responsible for the financial support of my children. "
-                    },
-                    {
-                        "name":"Appeal to people",
-                        "description": "An argument commits the fallacy of appeal to the people when the arguer relies on the audience's desire to be loved , esteemed, admired, valued, recognized and accepted by others in order to get them to accept the conclusion. There are two approaches involved: 1. Indirect - when the audience is a single individual, 2. Direct - when the audience is a group of individuals",
-                        "example": "Example of Direct Approach- Adolph Hitler, addressing an Aryan youth rally: You are the children of destiny, the greatest generation of racial purity ever witnessed on earth. You are the blood of our revered forefathers and the guardians of the fatherland. Your great destiny, however, carries an equally great responsibility. You must rise up, claim your rightful position as masters of the earth, and conquer the enemies of racial purity—the Jews, Catholics, gypsies, homosexuals, and other degenerate subhumans. Embark on your appointed crusade with the joy of cruelty in your heart!  With a steel-like romanticism in your soul for the glorious Reich!"
-                    },
-                    {
-                        "name":"Argument Against the Person (ad Hominen)",
-                        "description": "An argument commits ad Hominem when the arguer rejects another person's statement/argument due to the nature of the person who made the statement/argument rather than on the merits of the statement/argument itself. There are three main types: 1. ad Hominem abusive, 2. ad hominem circumstantial, 3. ad hominem tu quoque (\"you too\") fallacy",
-                        "example": "Example of ad Hominem Circumstantial - Jojo thinks that war is wrong. But he has never been in a war, so how can he know? He must be wrong about that."
-                    },
-                    {
-                        "name":"Accident",
-                        "description": "An argument commits the fallacy of accident when a general rule or law is applied to a specific case that it was not intended to cover.",
-                        "example": "Plunging a knife into another person's chest is illegal. Given that surgeons do precisely this when operating, it follows that surgeons should be arrested."
-                    },
-                    {
-                        "name":"Straw Man",
-                        "description": "The arguer distorts or misrepresents an opponent’s argument for the purpose of more easily attacking it, proceeds to demolish the distorted position, and then concludes that the opponent’s actual argument has been destroyed. By so doing, the arguer has set up a straw man (easily refuted position) and knocked it down, only to conclude that the real man (opponent’s genuine thesis) has been knocked down as well. Politicians utilize this fallacy frequently, primarily because many voters are insufficiently informed to notice that a given position has been unfairly characterized or depicted.",
-                        "example": "Umbasa says he is opposed to violence. Apparently, Umbasa endorses a view in which he doesn't even think it's okay to try to physically stop someone from attacking him and his family. His position seems absurd."
-                    },
-                    {
-                        "name":"Missing the Point",
-                        "description": "Sometimes called irrelevant conclusion, the fallacy of missing the point exhibits a specific type of logical irrelevance. It occurs when the premises of an argument support a particular conclusion, but the arguer draws a different conclusion that is usually vaguely related to the correct conclusion.",
-                        "example": "Every time lily has peanuts with her lunch, she has an incredibly severe allergic reaction. She should probably start having peanuts with dinner instead."
-                    },
-                    {
-                        "name":"Red Herring",
-                        "description": "Also called Diversion, the fallacy of Red Herring is closely related to the fallacy of Missing the Point. It is committed when an arguer diverts the attention of the reader/listener away from the issue at hand by raising some other, seemingly related issue. In so doing, the arguer attempts to sidetrack the reader/listener from the real issue. The fallacy gets its name from the practice of using a herring, a particularly smelly fish with a potent scent, to divert hunting dogs from the scent of a fox.",
-                        "example": "We should definitely continue to build nuclear power plants, despite what the environmental wackos say. Just imagine where we would be if we ceased to advance technologically. We’d be living in caves like Osama bin Laden!"
-                    }
-                ]
-            },
-            "fallaciesOfWeakInduction":{
-                "name":"Fallacies of Weak Induction",
-                "description":"",
-                "fallacies":[
-                    {
-                        "name":"",
-                        "description": "",
-                        "example": ""
-                    }
-                ]
-            },
-            "fallaciesOfAmbiguity":{
-                "name":"",
-                "description":"",
-                "fallacies":[
-                    {
-                        "name":"",
-                        "description": "",
-                        "example": ""
-                    }
-                ]
-            },
-            "fallaciesOfGrammaticalAnalogy":{
-                "name":"",
-                "description":"",
-                "fallacies":[
-                    {
-                        "name":"",
-                        "description": "",
-                        "example": ""
-                    }
-                ]
-            }
+            "name": "Fallacies of Relevance",
+            "description": "The fallacies of relevance clearly fail to provide adequate reason for believing the truth of their conclusions. Although they are often used in attempts to persuade people by non-logical means, only the unwary, the predisposed, and the gullible are apt to be fooled by their illegitimate appeals. Many of them were identified by medieval and renaissance logicians, whose Latin names for them have passed into common use.",
+            "fallacies": [
+                {
+                    "name": "Appeal to Force (ad baculum)",
+                    "description": "In the appeal to force, someone in a position of power threatens to bring down unfortunate consequences upon anyone who dares to disagree with a proffered proposition.",
+                    "example": "If you do not agree with my political opinions, you will receive a grade of F for this course."
+                },
+                {
+                    "name": "Appeal to Pity (ad misericordiam)",
+                    "description": "An appeal to pity tries to win acceptance by pointing out the unfortunate consequences that will otherwise fall upon the speaker and others, for whom we would then feel sorry.",
+                    "example": "I am a single parent, solely responsible for the financial support of my children. "
+                },
+                {
+                    "name": "Appeal to people (ad populum)",
+                    "description": "An argument commits the fallacy of appeal to the people when the arguer relies on the audience's desire to be loved , esteemed, admired, valued, recognized and accepted by others in order to get them to accept the conclusion. There are two approaches involved: 1. Indirect - when the audience is a single individual, 2. Direct - when the audience is a group of individuals",
+                    "example": "Example of Direct Approach- Adolph Hitler, addressing an Aryan youth rally: You are the children of destiny, the greatest generation of racial purity ever witnessed on earth. You are the blood of our revered forefathers and the guardians of the fatherland. Your great destiny, however, carries an equally great responsibility. You must rise up, claim your rightful position as masters of the earth, and conquer the enemies of racial purity—the Jews, Catholics, gypsies, homosexuals, and other degenerate subhumans. Embark on your appointed crusade with the joy of cruelty in your heart!  With a steel-like romanticism in your soul for the glorious Reich!"
+                },
+                {
+                    "name": "Argument against the Person (ad Hominen)",
+                    "description": "An argument commits ad Hominem when the arguer rejects another person's statement/argument due to the nature of the person who made the statement/argument rather than on the merits of the statement/argument itself. There are three main types: 1. ad Hominem abusive, 2. ad hominem circumstantial, 3. ad hominem tu quoque (\"you too\") fallacy",
+                    "example": "Example of ad Hominem Circumstantial - Jojo thinks that war is wrong. But he has never been in a war, so how can he know? He must be wrong about that."
+                },
+                {
+                    "name": "Accident",
+                    "description": "An argument commits the fallacy of accident when a general rule or law is applied to a specific case that it was not intended to cover.",
+                    "example": "Plunging a knife into another person's chest is illegal. Given that surgeons do precisely this when operating, it follows that surgeons should be arrested."
+                },
+                {
+                    "name": "Straw Man",
+                    "description": "The arguer distorts or misrepresents an opponent’s argument for the purpose of more easily attacking it, proceeds to demolish the distorted position, and then concludes that the opponent’s actual argument has been destroyed. By so doing, the arguer has set up a straw man (easily refuted position) and knocked it down, only to conclude that the real man (opponent’s genuine thesis) has been knocked down as well. Politicians utilize this fallacy frequently, primarily because many voters are insufficiently informed to notice that a given position has been unfairly characterized or depicted.",
+                    "example": "Umbasa says he is opposed to violence. Apparently, Umbasa endorses a view in which he doesn't even think it's okay to try to physically stop someone from attacking him and his family. His position seems absurd."
+                },
+                {
+                    "name": "Missing the Point",
+                    "description": "Sometimes called irrelevant conclusion, the fallacy of missing the point exhibits a specific type of logical irrelevance. It occurs when the premises of an argument support a particular conclusion, but the arguer draws a different conclusion that is usually vaguely related to the correct conclusion.",
+                    "example": "Every time lily has peanuts with her lunch, she has an incredibly severe allergic reaction. She should probably start having peanuts with dinner instead."
+                },
+                {
+                    "name": "Red Herring",
+                    "description": "Also called Diversion, the fallacy of Red Herring is closely related to the fallacy of Missing the Point. It is committed when an arguer diverts the attention of the reader/listener away from the issue at hand by raising some other, seemingly related issue. In so doing, the arguer attempts to sidetrack the reader/listener from the real issue. The fallacy gets its name from the practice of using a herring, a particularly smelly fish with a potent scent, to divert hunting dogs from the scent of a fox.",
+                    "example": "We should definitely continue to build nuclear power plants, despite what the environmental wackos say. Just imagine where we would be if we ceased to advance technologically. We’d be living in caves like Osama bin Laden!"
+                }
+            ]
+        },
+        {
+            "name": "Fallacies of Weak Induction",
+            "description": "An argument is guilty of committing a fallacy of weak induction when the premises of the argument (although relevant to the conclusion) are not strong enough to support the conclusion.",
+            "fallacies": [
+                {
+                    "name": "Appeal to unqualified authority",
+                    "description": "This is only a fallacy when the person being put forth as an authority has no special qualification or is biased in some way, or else only one authority is cited on an issue where there is considerable disagreement between authorities, (such as philosophy or religion) This fallacy is often exploited by advertisers. A famous musician claiming that Sparkle toothpaste prevents cavities better than others is an invalid authority. ",
+                    "example": " Scientists have not conclusively shown that AIDS cannot be transmitted through casual contact. Consequently, we should carefully avoid any casual contact with suspected AIDS carriers."
+                },
+                {
+                    "name": "Appeal to Ignorance (ad ignorantiam)",
+                    "description": "One of the premises admits that nothing is known about a subject and then the conclusion purports to assert definitely something one way or the other about the subject, on the basis of this ignorance.",
+                    "example": " Scientists have not conclusively shown that AIDS cannot be transmitted through casual contact. Consequently, we should carefully avoid any casual contact with suspected AIDS carriers."
+                },
+                {
+                    "name": "Hasty Generalization",
+                    "description": "This fallacy is committed when the arguer draws a probable inference about all members of a class on the basis of an unrepresentative sample of that class. A selective sample may be unrepresentative of the entire class because of its limited quantity or because it does not accurately reflect the internal variety of the class in question (atypical sample). Therefore, Hasty generalization is a weak inductive argument, one that often serves to solidify prejudicial stereotypes. It is occasionally referred to as Converse accident because it proceeds in a direction opposite to that of Accident.",
+                    "example": "The last two times we ate at that taco shop, the tacos weren't very good. They probably have never made good tacos."
+                },
+                {
+                    "name": "False Cause",
+                    "description": "This fallacy occurs whenever the link between premises and conclusion depends on some imagined causal connection that probably does not exist. The reality of the causal connection is presumed for some reason.",
+                    "example": "Nervous entrepreneur:  Ever since we stopped going to church on Sunday, business has been progressively getting worse. If we want to avoid bankruptcy we better start going to church again."
+                },
+                {
+                    "name": "Slippery Slope", 
+                    "description": "Also called the Domino fallacy because of its similarity to the child’s game, the fallacy of Slippery slope is committed when the arguer draws a conclusion, typically considered to be inevitable, on the basis of an alleged chain reaction or series of causal steps with a seemingly innocent initial step that starts the process, just as in the game of dominoes or when one begins to slide down a slippery slope. As such, this fallacy is a variety of the False cause fallacy, yet we will consider it separately as Hurley does. The error of this fallacy consists in assuming, without sufficient evidence, that a particular event will start a causal chain reaction. However, for each event in any alleged series of events, an independent argument must be presented.",
+                    "example": "Studying philosophy is a very dangerous thing to do. It cultivates a critical attitude, which in turn makes an individual skeptical of their religious beliefs. And once you’ve begun to lose faith in your religion, it’s a small step to atheism. And we all know that atheism leads to immorality, which in turn leads to a life of crime. And lastly, a criminal lifestyle will get you damned to hell for eternity. Therefore, by all means, never study philosophy lest you also be damned to everlasting damnation!"
+                },
+                {
+                    "name": "Weak Analogy",
+                    "description": "The fallacy of Weak analogy is committed when a conclusion is based on an insufficient, poor, or inadequate analogy. The analogy offered as evidence is faulty because it is irrelevant; the claimed similarity is superficial or unrelated to the issue at stake in the argument. Or the analogy may be relevant to some extent yet overlooks or ignores significant dissimilarities between the analogs.",
+                    "example": "From David Hume’s On Suicide:  It would be no crime to divert the Nile or Danube from its course, were I able to effect such purposes. Where then is the crime of turning a few ounces of blood from their natural channel?"
+                }
+            ]
+        },
+        {
+            "name": "Fallacies of Presumption",
+            "description": "An argument commits a fallacy of presumption when the premises of the argument assume or presuppose that of which they are offered in support.",
+            "fallacies": [
+                {
+                    "name": "Begging the Question (Petito Principii)",
+                    "description": "This occurs when the very thing to be proven in the conclusion (or some crucial bit of evidence which supports it) is already assumed to be true at the outset of the argument. There are three basic types: 1. Leaving out a key premise. 2. Restating the conclusion as a premise. 3. Arguing in a circle.",
+                    "example": "Example of missing premise: Lowering taxes would cause the crime rate to absolutely plummet to never-before seen low levels. Obviously, we should lower taxes."
+                },
+                {
+                    "name": "Complex Question",
+                    "description": "This is when a question is proposed as if a “yes” or “no” or some other short or one-word answer would suffice, when a longer, clarifying answer is actually needed. This is due to the fact that the question being asked is actually TWO questions disguised as one.",
+                    "example": "Does your boss know that you have stolen from the company?"
+                },
+                {
+                    "name": "False Dichotomy",
+                    "description": "This occurs whenever someone presents two options as if they were the ONLY two options (though they are not), and then, after eliminating ONE of them, concludes that the second option must be true. ",
+                    "example": "Either you’ll go out on a date with me, or you clearly hate my guts. But, I know you don’t hate my guts."
+                },
+                {
+                    "name": "Suppressed Evidence",
+                    "description": "This occurs when an argument purposely leaves out or ignores relevant evidence because that evidence would cast doubt on the conclusion being offered.",
+                    "example": "I would bea great employee. You should hire me. I graduated magna cum laude with a degree in business from Harvard, I know about all of the procedures, and I have extensive experience in this line of work."
+                }
+            ]
+        },
+        {
+            "name": "Fallacies of Ambiguity",
+            "description": "An argument commits a fallacy of ambiguity when either a term or statement in the argument is unclear (or ambiguous), and this ambiguity obscures some bad reasoning.",
+            "fallacies": [
+                {
+                    "name": "Equivocation",
+                    "description": "This occurs whenever a single term is being used in two different ways within an argument. ",
+                    "example": "The pamphlet for this animal rescue organization says, ‘All former zoo animals are now free’.I think we should go get a free koala bear. After all, they’re just giving them away!"
+                },
+                {
+                    "name": "Amphiboly",
+                    "description": "This occurs whenever an ambiguous statement, which could be interpreted in different ways, is interpreted in the WRONG way in order to support some conclusion.",
+                    "example": "They say that Peggy gave a lecture on drugs yesterday. I had no idea she was a junkie!"
+                }
+            ]
+        },
+        {
+            "name": "Fallacies of Grammatical Analogy",
+            "description": "An argument commits a fallacy of grammatical analogy when it is structurally analogous to a good argument, but in which an unwarranted inference is made.",
+            "fallacies": [
+                {
+                    "name": "Composition",
+                    "description": "This occurs when someone mistakenly assumes that, just because all of the PARTS of something have some feature, that the whole must ALSO have that feature.",
+                    "example": "If you like cheese, bread, and tomatoes, then you’ll like pizza."
+                },
+                {
+                    "name": "Divison",
+                    "description": "This occurs when someone mistakenly assumes that, just because a WHOLE has some feature, that all of its parts must ALSO have that feature. ",
+                    "example": "Since the Mona Lisa is a beautiful painting, it follows that each individual atom of paint in the Mona Lisa is beautiful too."
+                }
+            ]
+        },
+        {
+            "name": "Additional Fallacies",
+            "description": "Other fallacies",
+            "fallacies": [
+                {
+                    "name": "Genetic Fallacy",
+                    "description": "The genetic fallacy (also known as the fallacy of origins or fallacy of virtue) is a fallacy of irrelevance that is based solely on someone's or something's history, origin, or source rather than its current meaning or context.",
+                    "example": "This chair must be made out of wood, since it was made only from that oak tree."
+                },
+                {
+                    "name": "Gambler's Fallacy",
+                    "description": "The gambler's fallacy, also known as the Monte Carlo fallacy or the fallacy of the maturity of chances, is the mistaken belief that, if something happens more frequently than normal during a given period, it will happen less frequently in the future (or vice versa).",
+                    "example": "The last time someone used this slot machine, they hit a jackpot. So, the next time someone uses that same slot machine, it definitely will not be a jackpot."
+                }
+            ]
         }
     ]
 }

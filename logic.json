@@ -2,17 +2,17 @@
     "larguments" : [
         {
             "argument":"Old man Brown claims that he saw a flying saucer in his farm, but he never got beyond the fourth grade in school and can hardly read or write. He is completely ignorant of what scientists have written on the subject, so his report cannot possibly be true.",
-            "opt1":"Appeal to Force",
-            "opt2":"ad Hominem",
+            "opt1":"Argument Against the Person (ad Hominem)",
+            "opt2":"Appeal to force (ad baculum)",
             "opt3":"Accident",
             "opt4":"Straw Man",
-            "sol":2
+            "sol":1
         },
         {
             "argument":"Pro-choice is absurd. How could anyone support killing an innocent human being?",
             "opt1":"Straw Man",
             "opt2":"Appeal to People",
-            "opt3":"ad Hominem",
+            "opt3":"Argument Against the Person (ad Hominem)",
             "opt4":"Missing the Point",
             "sol":2
         },
@@ -20,17 +20,593 @@
             "argument":"Egalitarianism is wrong because it is the same as communism.",
             "opt1":"Missing the Point",
             "opt2":"Accident",
-            "opt3":"Appeal to Force",
+            "opt3":"Appeal to force (ad baculum)",
             "opt4":"Straw Man",
             "sol":1
         },
         {
             "argument":"Socrates' arguments about human excellence are rubbish. What could a man as ugly as he know about human excellence.",
             "opt1":"Appeal to People",
-            "opt2":"ad Hominem",
-            "opt3":"Appeal to Force",
+            "opt2":"Argument Against the Person (ad Hominem)",
+            "opt3":"Appeal to force (ad baculum)",
             "opt4":"Missing the Point",
             "sol":2
+        },
+        {
+            "argument":"You ought to try to study harder in school this year, Samuel, because it will spare your parents the embarrassment of a letter from the instructor telling them you're not taking your school work seriously..",
+            "opt1":"Begging the Question (Petito Principii)",
+            "opt2":"Hasty Generalization",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Weak Analogy",
+            "sol":3
+        },
+        {
+            "argument":"You will back up my story and tell the committee I am reasoning logically; because if you don't I will do everything in my power to see that you are fired.",
+            "opt1":"Begging the Question (Petito Principii)",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Hasty Generalization",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":3
+        },
+        {
+            "argument":"I can see that you are in the market for a new car. We're having a sale on Pintos this month. Do you want to pay cash or do you want the installment plan?",
+            "opt1":"Argument Against the Person (ad Hominem)",
+            "opt2":"Begging the Question (Petito Principii)",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Complex Question",
+            "sol":4
+        },
+        {
+            "argument":"John has really worked hard on his term project, and he will really be depressed if he does not make an A. For these reasons, you just have to give him an A on his project.",
+            "opt1":"Amphiboly",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Appeal to people (ad populum)",
+            "opt4":"Begging the Question (Petito Principii)",
+            "sol":2
+        },
+        {
+            "argument":"What is right is what is morally obligatory. What is morally obligatory is what you should do. Of course, you should do something because it is the right thing to do.",
+            "opt1":"Begging the Question (Petito Principii)",
+            "opt2":"False Cause",
+            "opt3":"Amphiboly",
+            "opt4":"Weak Analogy",
+            "sol":1
+        },
+        {
+            "argument":"I can see that the efficiency with which the Tornado Home Vacuum System works and the marvelous way in which it saves on toil and drudgery in the home impresses you. Therefore, shall I charge it to your account or do you want to pay cash?",
+            "opt1":"Complex Question",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Amphiboly",
+            "opt4":"False Cause",
+            "sol":1
+        },
+        {
+            "argument":"If we wish to determine which of a person's motives determine his actions, we need only examine which of the alternative courses of action he chooses to perform. Therefore, a person's motives are determined by the actions he chooses to perform.",
+            "opt1":"False Cause",
+            "opt2":"Missing the Point",
+            "opt3":"Appeal to Ignorance (ad ignorantiam)",
+            "opt4":"Begging the Question (Petito Principii)",
+            "sol":4
+        },
+        {
+            "argument":"I don't care what your arguments are; you are using Mickey Mouse tactics. The arguments you give are simply tacky.",
+            "opt1":"False Cause",
+            "opt2":"Appeal to Ignorance (ad ignorantiam)",
+            "opt3":"Appeal to Pity (ad misericordiam)",
+            "opt4":"Argument Against the Person (ad Homeinem)",
+            "sol":4
+        },
+        {
+            "argument":"Officer, please excuse my going over the speed limit, but my mother is ill and I'm being audited by the IRS, and I don't know how I can meet all my bills.",
+            "opt1":"Appeal to Pity (ad misericordiam)",
+            "opt2":"Appeal to force (ad baculum)",
+            "opt3":"Weak Analogy",
+            "opt4":"Hasty Generalization",
+            "sol":1
+        },
+        {
+            "argument":"But Doctor, surely your advice that I should not drink coffee is not sound advice since you yourself often drink coffee.",
+            "opt1":"Missing the Point",
+            "opt2":"False Cause",
+            "opt3":"Argument Against the Person (ad Homeinem)",
+            "opt4":"Appeal to Ignorance (ad ignorantiam)",
+            "sol":3
+        },
+        {
+            "argument":"The General Assembly of the United Nations keeps voting for radical issues. Therefore, the U. S. will be forced to reduce its financial contribution to the U. N. unless there is a demonstrated change soon.",
+            "opt1":"Equivocation",
+            "opt2":"Missing the Point",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Appeal to Ignorance (ad ignorantiam)",
+            "sol":3
+        },
+        {
+            "argument":"During the Gulf war many Americans made immense profits. That is an indisputable fact. Therefore, there can be no doubt that American business interests instigated the war.",
+            "opt1":"False Cause",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Appeal to Ignorance (ad ignorantiam)",
+            "opt4":"Missing the Point",
+            "sol":1
+        },
+        {
+            "argument":"No mathematician has ever been able to demonstrate the truth of the variants of the Goldberg conjecture, so they cannot all be true..",
+            "opt1":"Appeal to Ignorance (ad ignorantiam)",
+            "opt2":"Weak Analogy",
+            "opt3":"Missing the Point",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":1
+        },
+        {
+            "argument":"Everyone says that a logic course is easier than a math course, so it must be.",
+            "opt1":"Missing the Point",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Accident",
+            "opt4":"Hasty Generalization",
+            "sol":3
+        },
+        {
+            "argument":"The best students make the best grades. Therefore, getting high grades will undoubtedly cause you to be a better student.",
+            "opt1":"Appeal to Pity (ad misericordiam)",
+            "opt2":"False Cause",
+            "opt3":"Appeal to Ignorance (ad ignorantiam)",
+            "opt4":"Straw Man",
+            "sol":2
+        },
+        {
+            "argument":"Everyone believes that men write the best novels; therefore, there is little doubt that they do so.",
+            "opt1":"False Cause",
+            "opt2":"Straw Man",
+            "opt3":"Amphiboly",
+            "opt4":"Appeal to people (ad populum)",
+            "sol":4
+        },
+        {
+            "argument":"Since the Bible says, \"Thou shall not kill,\" it would be wrong to exterminate the termites in City Hall.",
+            "opt1":"Accident",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Straw Man",
+            "opt4":"False Cause",
+            "sol":1
+        },
+        {
+            "argument":"A great many charges of graft and corruption have been brought against Senator Anderson over the past several years, and he has had numerous opportunities to refute them, but he has never done so. Therefore, I think, the evidence indicates he is not to be trusted.",
+            "opt1":"Appeal to people (ad populum)",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Appeal to Ignorance (ad ignorantiam)",
+            "opt4":"Accident",
+            "sol":3
+        },
+        {
+            "argument":"The present U.S. administration has not yet developed an energy policy. Nonetheless, almost every other developed nation in the world has an energy policy, except us. Therefore, the United States should have a unified energy policy.",
+            "opt1":"False Cause",
+            "opt2":"Accident",
+            "opt3":"Appeal to people (ad populum)",
+            "opt4":"Appeal to Ignorance (ad ignorantiam)",
+            "sol":3
+        },
+        {
+            "argument":"Immanuel: When people are happy, they are more inclined to obey the moral law. Knowing this, we can see that we all have an indirect moral obligation to be happy. John: Sure, sure. Let's encourage people to pursue happiness at any price, is that it? But what you don't seem to understand is that one person's unrestrained pursuit of personal happiness can wreak havoc on the personal happiness of others.",
+            "opt1":"Straw Man",
+            "opt2":"Missing the Point",
+            "opt3":"False Cause",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":1
+        },
+        {
+            "argument":"Inez: The double standard has been as hard on men as it has been on women, since it tends to define masculinity in a very narrow way, and this has restricted men's freedom to explore the full range of their possibilities. Jean: What are you saying, Inez? Do you think women have had all the freedom in the world in this regard? On the contrary, socially sanctioned female roles have been like a straightjacket to women.",
+            "opt1":"Appeal to Ignorance (ad ignorantiam)",
+            "opt2":"Straw Man",
+            "opt3":"Accident",
+            "opt4":"Weak Analogy",
+            "sol":2
+        },
+        {
+            "argument":"It was his fault, Officer. You can tell by the kind of car I'm driving and by my clothes that I am a good citizen and would not lie. Look at the rattletrap he is driving, and look at how he is dressed. You can't believe anything that a dirty, longhaired hippie like that might tell you. Search his car; he probably has pot in it.",
+            "opt1":"Appeal to Ignorance (ad ignorantiam)",
+            "opt2":"Argument Against the Person (ad Homeinem)",
+            "opt3":"Amphiboly",
+            "opt4":"Equivocation",
+            "sol":2
+        },
+        {
+            "argument":" General Jed M. Lamgetter believes that it is absolutely essential to our future security that we immediately upgrading our computing systems to Linux from Microsoft NT. But his arguments are hardly deserving of careful consideration, for in a couple of weeks General Lamgetter will retire from the Army and become CEO and be given large stock options in Red Hat, one of the main linux producers.",
+            "opt1":"Equivocation",
+            "opt2":"Missing the Point",
+            "opt3":"Argument Against the Person (ad Homeinem)",
+            "opt4":"Appeal to Pity (ad misericordiam)",
+            "sol":3
+        },
+        {
+            "argument":"The real reason you favor the draft is that you're too old to be drafted.",
+            "opt1":"Equivocation",
+            "opt2":"Appeal to force (ad baculum)",
+            "opt3":"Weak Analogy",
+            "opt4":"Argument Against the Person (ad Homeinem)",
+            "sol":4
+        },
+        {
+            "argument":"Richard Nixon: \"Mr. Sparkman and Mr. Stevenson should come before the American people, as I have and make a complete financial statement as to their financial history, and if they don't, it will be an admission that they have something to hide.",
+            "opt1":"Hasty Generalization",
+            "opt2":"Appeal to Ignorance (ad ignorantiam)",
+            "opt3":"False Cause",
+            "opt4":"Appeal to Pity (ad misericordiam)",
+            "sol":2
+        },
+        {
+            "argument":"Stanford produces the best graduates in the United States. Therefore, any every Ph.D. from Stanford is better than any other Ph.D. in the country.",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"Divison",
+            "opt3":"Accident",
+            "opt4":"False Cause",
+            "sol":2
+        },
+        {
+            "argument":"Water extinguishes fire. Oxygen is part of water. Therefore, oxygen will extinguish fire.",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"Hasty Generalization",
+            "opt3":"Gambler's Fallacy",
+            "opt4":"Divison",
+            "sol":4
+        },
+        {
+            "argument":" Priests take a vow of poverty. The Church is a corporate body composed of priests. Therefore, the Church should not own property.",
+            "opt1":"Composition",
+            "opt2":"Appeal to Ignorance (ad ignorantiam)",
+            "opt3":"Gambler's Fallacy",
+            "opt4":"Weak Analogy",
+            "sol":1
+        },
+        {
+            "argument":"Since the average life-span of an individual in developing countries is thirty years, the leaders in those countries grow old before they have time to learn the rudiments of good government.",
+            "opt1":"Divison",
+            "opt2":"Amphiboly",
+            "opt3":"Straw Man",
+            "opt4":"False Cause",
+            "sol":1
+        },
+        {
+            "argument":"As the convener of the ninth annual Women's Freedom Movement, let me remind you once again that women have been discriminated against for centuries, and they have suffered as second-rate people for centuries. I, for one, refuse to submit to this discrimination and second-rate treatment any longer.",
+            "opt1":"Weak Analogy",
+            "opt2":"False Cause",
+            "opt3":"Divison",
+            "opt4":"Missing the Point",
+            "sol":3
+        },
+        {
+            "argument":" I ought always to do what is right. I have a right to say what I think. Therefore, I ought always to say what I think.",
+            "opt1":"Weak Analogy",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Divison",
+            "opt4":"Equivocation",
+            "sol":4
+        },
+        {
+            "argument":"According to the law, a man is innocent until proved guilty. So Mr. Ratskeller must be innocent of the charge of bribery, since he has not yet been proved guilty. Therefore, since Mr. Ratskeller is innocent, it would be wrong to convict him.",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"Accident",
+            "opt3":"Equivocation",
+            "opt4":"False Cause",
+            "sol":3
+        },
+        {
+            "argument":"Although you have said you will give me no more of your time, I'll not ask for any more of your time; I'll just ask for the amount of time you have already given once more.",
+            "opt1":"Amphiboly",
+            "opt2":"False Cause",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Accident",
+            "sol":1
+        },
+        {
+            "argument":"A description of a candidate who is woefully inept: \"I most enthusiastically recommend this candidate with no qualifications whatsoever.\"",
+            "opt1":"Amphiboly",
+            "opt2":"Straw Man",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Amphiboly",
+            "sol":4
+        },
+        {
+            "argument":" Nothing would be better than a high score on this test, but a poor grade would be better than nothing, so conclude that a bad grade would be better than a high score.  ",
+            "opt1":"Appeal to Pity (ad misericordiam)",
+            "opt2":"Weak Analogy",
+            "opt3":"Equivocation",
+            "opt4":"Appeal to Ignorance (ad ignorantiam)",
+            "sol":3
+        },
+        {
+            "argument":"I know I have not done all the work for the semester and have been absent a lot. However, I am the key point guard for the basketball team. If I get any grade lower than a C, I will not be able to play basketball next semester. If I don’t play, the team will lose. Will you please make sure that you give me at least a C for my final grade?",
+            "opt1":"Hasty Generalization",
+            "opt2":"Equivocation",
+            "opt3":"False Cause",
+            "opt4":"Appeal to Pity (argumentium ad misericordium)",
+            "sol":4
+        },
+        {
+            "argument":"Murder is morally wrong. Abortion is murder. Therefore, abortion is morally wrong.",
+            "opt1":"Begging the question (petitio principii)",
+            "opt2":"Weak Analogy",
+            "opt3":"Appeal to Pity (ad misericordiam)",
+            "opt4":"Equivocation",
+            "sol":1
+        },
+        {
+            "argument":"The Constitution guarantees Americans the right to control their bodies. Abortion is a choice affecting women’s bodies. Therefore, abortion is a constitutional right.",
+            "opt1":"Equivocation",
+            "opt2":"Straw Man",
+            "opt3":"Begging the question (petitio principii)",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":3
+        },
+        {
+            "argument":"All of the basketball team’s players are fast runners, high jumpers, and winners. Therefore, the team is a winner.",
+            "opt1":"Composition",
+            "opt2":"Weak Analogy",
+            "opt3":"Missing the Point",
+            "opt4":"Hasty Generalization",
+            "sol":1
+        },
+        {
+            "argument":"I like smoothies for breakfast because I can drink them on the run. My favorite breakfast foods are scrambled eggs, fresh fruit, bagels with cream cheese, soy sausage links, cottage cheese, oatmeal, cold pizza, and triple espressos. Therefore, I would like a breakfast smoothie made of scrambled eggs, fresh fruit, bagels with cream cheese, soy sausage links, cottage cheese, oatmeal, cold pizza, and triple espressos.",
+            "opt1":"Straw Man",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Composition",
+            "opt4":"Equivocation",
+            "sol":3
+        },
+        {
+            "argument":"Blueberry muffins taste good. Therefore, the individual ingredients comprising blueberry muffins also taste good.",
+            "opt1":"Equivocation",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Divison",
+            "opt4":"Missing the Point",
+            "sol":3
+        },
+        {
+            "argument":"Women in general make less money than men. Therefore, Brenda Barnes, CEO of the Sara Lee company, makes less money than the male delivery drivers who work for the company.",
+            "opt1":"Equivocation",
+            "opt2":"Divison",
+            "opt3":"False Cause",
+            "opt4":"Weak Analogy",
+            "sol":2
+        },
+        {
+            "argument":"Yesterday Jen went out in the rain and got soaked. The next day she was in bed with the flu. Therefore, the rain caused her to get sick.",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"False Cause",
+            "opt3":"Straw Man",
+            "opt4":"Divison",
+            "sol":2
+        },
+        {
+            "argument":"Each year thousands of people die in car accident across the country. Why should we worry about endangered animals?",
+            "opt1":"Equivocation",
+            "opt2":"Missing the Point",
+            "opt3":"Red Herring",
+            "opt4":"Straw Man",
+            "sol":3
+        },
+        {
+            "argument":"If we teach sex education in school, then students will have more sex. If students have more sex, we will have a rash of unplanned pregnancies and sexually transmitted diseases. Students will be forced to drop out of school and will never have the chance to succeed in life.",
+            "opt1":"Straw Man",
+            "opt2":"Slippery Slope",
+            "opt3":"Amphiboly",
+            "opt4":"False Cause",
+            "sol":2
+        },
+        {
+            "argument":"President Obama cannot truly have American interests in mind because he’s not truly American but Muslim.",
+            "opt1":"Appeal to people (ad populum)",
+            "opt2":"Appeal to force (ad baculum)",
+            "opt3":"Equivocation",
+            "opt4":"Straw Man",
+            "sol":4
+        },
+        {
+            "argument":"One day late in December…[Charles] Dickens announced that he couldn't travel by train anymore that year, \"on the grounds that the average annual quota of railroad accidents in Britain had not been filled and therefore further disasters were obviously imminent.\"",
+            "opt1":"Hasty Generalization",
+            "opt2":"Gambler's Fallacy",
+            "opt3":"Straw Man",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":3
+        },
+        {
+            "argument":"The acceptance of abortion does not end with the killing of unborn human life. It continues on to affect our attitude toward all aspects of human life. This is most obvious in how quickly, following the acceptance of abortion, comes the acceptance of infanticide―the killing of babies who after birth do not come up to someone's standard of life worthy to be lived―and then on to euthanasia of the aged. If human life can be taken before birth, there is no logical reason why human life cannot be taken after birth.",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"Equivocation",
+            "opt3":"Straw Man",
+            "opt4":"Slippery Slope",
+            "sol":4
+        },
+        {
+            "argument":"A major problem in dealing with [David] Irving as a cross-examiner lay in the fact that he would frequently build into his often lengthy and elaborate questions assumptions that themselves rested on his falsification of the evidence, and so had to be disputed before the question itself could be dealt with. This tactic, whether conscious or not, did not escape the attention of the judge. \"No, Mr. Irving, that will not do, will it?" he exclaimed on one such occasion: "You cannot put a question which has as its premise a misstatement about the date when gas chambers began operating…. If you are going to ask that question, and it is a relevant question, you must premise it correctly.\"",
+            "opt1":"Appeal to people (ad populum)",
+            "opt2":"Complex Question",
+            "opt3":"Equivocation",
+            "opt4":"Amphiboly",
+            "sol":2
+        },
+        {
+            "argument":"Every human group is born, grows, declines, and dies, as it must if it is an aggregation of individual living beings.",
+            "opt1":"Weak Analogy",
+            "opt2":"Straw Man",
+            "opt3":"Composition",
+            "opt4":"False Cause",
+            "sol":3
+        },
+        {
+            "argument":"How do we know that we have here in the Bible a right criterion of truth? We know because of the Bible's claims for itself. All through the Scripture are found frequent expressions such as \"Thus says the Lord,\" \"The Lord said,\" and \"God spoke.\" Such statements occur no less than 1,904 times in the 39 books of the Old Testament.",
+            "opt1":"Missing the Point",
+            "opt2":"Hasty Generalization",
+            "opt3":"Appeal to Pity (ad misericordiam)",
+            "opt4":"Begging the Question",
+            "sol":4
+        },
+        {
+            "argument":"Quebec environment minister Lise Bacon pledged the PCBs would be moved out and broken down somehow within 18 months. She also said that PCBs couldn't be all that dangerous because her father had washed his hands in PCBs but lived to an old age.",
+            "opt1":"Hasty Generalization",
+            "opt2":"Straw Man",
+            "opt3":"Equivocation",
+            "opt4":"Appeal to people (ad populum)",
+            "sol":1
+        },
+        {
+            "argument":"I can’t agree with those who argue for the right for homosexuals to marry. Anyway, taxes on married people are high. I think that taxes on the married are just ridiculous.",
+            "opt1":"Red herring",
+            "opt2":"Hasty Generalization",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Missing the Point",
+            "sol":1
+        },
+        {
+            "argument":"Reporter: “It seems to me that if you were elected president, the Congress with which you would have to work would not be very cooperative at all. How could you, as president, bring about any reform or help enact any beneficial legislation with a Congress that was almost totally opposed to your programs?” Ross Perot: “Well, if I were elected, about half the members of Congress would drop dead of heart attacks, and half of my problem would be solved from the outset.”",
+            "opt1":"Appeal to force (ad baculum)",
+            "opt2":"False Cause",
+            "opt3":"Straw Man",
+            "opt4":"Red Herring",
+            "sol":4
+        },
+        {
+            "argument":"While you may have concerns about my votes about the environment, I can assure you that I am an open minded individual. What we should really discuss is my record on votes that expanded educational opportunities for all children.",
+            "opt1":"Red Herring",
+            "opt2":"Missing the Point",
+            "opt3":"Equivocation",
+            "opt4":"Amphiboly",
+            "sol":1
+        },
+        {
+            "argument":"I am pretty sure that evolution is not a very good explanation for human life. Anyway, I am pretty offended that anyone would suggest that I came from a monkey.",
+            "opt1":"Straw Man",
+            "opt2":"Red Herring",
+            "opt3":"Appeal to Pity (ad misericordiam)",
+            "opt4":"Weak Analogy",
+            "sol":2
+        },
+        {
+            "argument":"Dogs are incredibly vicious animals; one of them bit me for reaching out to pet it.",
+            "opt1":"Equivocation",
+            "opt2":"Appeal to force (ad baculum)",
+            "opt3":"Straw Man",
+            "opt4":"Hasty Generalization",
+            "sol":4
+        },
+        {
+            "argument":"Elena smoked and drank everyday from the age of fifteen until she was eighty years old. Therefore smoking and drinking can’t be bad that you.",
+            "opt1":"Weak Analogy",
+            "opt2":"Amphiboly",
+            "opt3":"Hasty Generalization",
+            "opt4":"Appeal to people (ad populum)",
+            "sol":3
+        },
+        {
+            "argument":"My Christian neighbor is a really mean man. Therefore Christians are mean.",
+            "opt1":"Appeal to Pity (ad misericordiam)",
+            "opt2":"Hasty Generalization",
+            "opt3":"Appeal to force (ad baculum)",
+            "opt4":"Equivocation",
+            "sol":2
+        },
+        {
+            "argument":"Chris is skinny and eats six bags of chips everyday. Therefore, eating six bags of chips won’t make you fat.",
+            "opt1":"Missing the Point",
+            "opt2":"Weak Analogy",
+            "opt3":"False Cause",
+            "opt4":"Hasty Generalization",
+            "sol":4
+        },
+        {
+            "argument":"Drinking and driving is unsafe, so you shouldn’t bring your Pepsi in the car.",
+            "opt1":"Accident",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Equivocation",
+            "opt4":"Appeal to people (ad populum)",
+            "sol":1
+        },
+        {
+            "argument":"Taking something that is not yours is stealing, so the child picking up a penny off the street should be arrested.",
+            "opt1":"Weak Analogy",
+            "opt2":"Equivocation",
+            "opt3":"Accident",
+            "opt4":"Hasty Generalization",
+            "sol":3
+        },
+        {
+            "argument":"Assault is a crime so all Professional Boxers should be arrested.",
+            "opt1":"Appeal to people (ad populum)",
+            "opt2":"Accident",
+            "opt3":"Amphiboly",
+            "opt4":"Appeal to Ignorance (ad ignorantiam)",
+            "sol":2
+        },
+        {
+            "argument":"Speeding is dangerous so all EMTs responding to calls must strictly obey speed limits.",
+            "opt1":"Appeal to Ignorance (ad ignorantiam)",
+            "opt2":"Appeal to people (ad populum)",
+            "opt3":"Equivocation",
+            "opt4":"Accident",
+            "sol":4
+        },
+        {
+            "argument":"Causing someone pain is wrong, so all surgeons are bad people.",
+            "opt1":"Accident",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Equivocation",
+            "opt4":"Amphiboly",
+            "sol":1
+        },
+        {
+            "argument":"Ronald Reagan defeated communism because he said “Mr. Gorbochev, tear down this wall,” and the Berlin Wall was down within a year.",
+            "opt1":"Weak Analogy",
+            "opt2":"False Cause",
+            "opt3":"Appeal to Pity (ad misericordiam)",
+            "opt4":"Appeal to force (ad baculum)",
+            "sol":2
+        },
+        {
+            "argument":"I prayed that the Patriots would win the Super Bowl, and they did!  God heard my prayer.",
+            "opt1":"False Cause",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Amphiboly",
+            "opt4":"Weak Analogy",
+            "sol":1
+        },
+        {
+            "argument":"Your 1999 Cadillac and my 2011 Prius are both silver, and my Prius gets 35 miles to the gallon, so your Cadillac probably gets 35 miles to the gallon too.",
+            "opt1":"Weak Analogy",
+            "opt2":"Equivocation",
+            "opt3":"Hasty Generalization",
+            "opt4":"False Cause",
+            "sol":1
+        },
+        {
+            "argument":"A horse is like a dog, they both can swim.",
+            "opt1":"Appeal to Pity (ad misericordiam)",
+            "opt2":"Weak Analogy",
+            "opt3":"Hasty Generalization",
+            "opt4":"Equivocation",
+            "sol":2
+        },
+        {
+            "argument":"Guns are like hammers, they are both made from metal and can be used for murder.",
+            "opt1":"Missing the Point",
+            "opt2":"Appeal to Pity (ad misericordiam)",
+            "opt3":"Weak Analogy",
+            "opt4":"Missing the Point",
+            "sol":3
+        },
+        {
+            "argument":"Humans are like cats because they are mammals and warm-blooded.",
+            "opt1":"Equivocation",
+            "opt2":"Appeal to force (ad baculum)",
+            "opt3":"Weak Analogy",
+            "opt4":"Missing the Point",
+            "sol":2
+        },
+        {
+            "argument":"A private college is like a public college, they both have dorms.",
+            "opt1":"Equivocation",
+            "opt2":"Slippery Slope",
+            "opt3":"Red Herring",
+            "opt4":"Weak Analogy",
+            "sol":4
         }
     ]
 }
