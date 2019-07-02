@@ -1,0 +1,85 @@
+{
+    "fallacies" : [
+        {
+            "fallaciesOfRelevance":{
+                "name":"Fallacies of Relevance",
+                "description":"The fallacies of relevance clearly fail to provide adequate reason for believing the truth of their conclusions. Although they are often used in attempts to persuade people by non-logical means, only the unwary, the predisposed, and the gullible are apt to be fooled by their illegitimate appeals. Many of them were identified by medieval and renaissance logicians, whose Latin names for them have passed into common use.",
+                "fallacies":[
+                    {
+                        "name":"Appeal to Force",
+                        "description": "In the appeal to force, someone in a position of power threatens to bring down unfortunate consequences upon anyone who dares to disagree with a proffered proposition.",
+                        "example": "If you do not agree with my political opinions, you will receive a grade of F for this course."
+                    },
+                    {
+                        "name":"Appeal to Pity",
+                        "description": "An appeal to pity tries to win acceptance by pointing out the unfortunate consequences that will otherwise fall upon the speaker and others, for whom we would then feel sorry.",
+                        "example": "I am a single parent, solely responsible for the financial support of my children. "
+                    },
+                    {
+                        "name":"Appeal to people",
+                        "description": "An argument commits the fallacy of appeal to the people when the arguer relies on the audience's desire to be loved , esteemed, admired, valued, recognized and accepted by others in order to get them to accept the conclusion. There are two approaches involved: 1. Indirect - when the audience is a single individual, 2. Direct - when the audience is a group of individuals",
+                        "example": "Example of Direct Approach- Adolph Hitler, addressing an Aryan youth rally: You are the children of destiny, the greatest generation of racial purity ever witnessed on earth. You are the blood of our revered forefathers and the guardians of the fatherland. Your great destiny, however, carries an equally great responsibility. You must rise up, claim your rightful position as masters of the earth, and conquer the enemies of racial purity—the Jews, Catholics, gypsies, homosexuals, and other degenerate subhumans. Embark on your appointed crusade with the joy of cruelty in your heart!  With a steel-like romanticism in your soul for the glorious Reich!"
+                    },
+                    {
+                        "name":"Argument Against the Person (ad Hominen)",
+                        "description": "An argument commits ad Hominem when the arguer rejects another person's statement/argument due to the nature of the person who made the statement/argument rather than on the merits of the statement/argument itself. There are three main types: 1. ad Hominem abusive, 2. ad hominem circumstantial, 3. ad hominem tu quoque (\"you too\") fallacy",
+                        "example": "Example of ad Hominem Circumstantial - Jojo thinks that war is wrong. But he has never been in a war, so how can he know? He must be wrong about that."
+                    },
+                    {
+                        "name":"Accident",
+                        "description": "An argument commits the fallacy of accident when a general rule or law is applied to a specific case that it was not intended to cover.",
+                        "example": "Plunging a knife into another person's chest is illegal. Given that surgeons do precisely this when operating, it follows that surgeons should be arrested."
+                    },
+                    {
+                        "name":"Straw Man",
+                        "description": "The arguer distorts or misrepresents an opponent’s argument for the purpose of more easily attacking it, proceeds to demolish the distorted position, and then concludes that the opponent’s actual argument has been destroyed. By so doing, the arguer has set up a straw man (easily refuted position) and knocked it down, only to conclude that the real man (opponent’s genuine thesis) has been knocked down as well. Politicians utilize this fallacy frequently, primarily because many voters are insufficiently informed to notice that a given position has been unfairly characterized or depicted.",
+                        "example": "Umbasa says he is opposed to violence. Apparently, Umbasa endorses a view in which he doesn't even think it's okay to try to physically stop someone from attacking him and his family. His position seems absurd."
+                    },
+                    {
+                        "name":"Missing the Point",
+                        "description": "Sometimes called irrelevant conclusion, the fallacy of missing the point exhibits a specific type of logical irrelevance. It occurs when the premises of an argument support a particular conclusion, but the arguer draws a different conclusion that is usually vaguely related to the correct conclusion.",
+                        "example": "Every time lily has peanuts with her lunch, she has an incredibly severe allergic reaction. She should probably start having peanuts with dinner instead."
+                    },
+                    {
+                        "name":"Red Herring",
+                        "description": "Also called Diversion, the fallacy of Red Herring is closely related to the fallacy of Missing the Point. It is committed when an arguer diverts the attention of the reader/listener away from the issue at hand by raising some other, seemingly related issue. In so doing, the arguer attempts to sidetrack the reader/listener from the real issue. The fallacy gets its name from the practice of using a herring, a particularly smelly fish with a potent scent, to divert hunting dogs from the scent of a fox.",
+                        "example": "We should definitely continue to build nuclear power plants, despite what the environmental wackos say. Just imagine where we would be if we ceased to advance technologically. We’d be living in caves like Osama bin Laden!"
+                    }
+                ]
+            },
+            "fallaciesOfWeakInduction":{
+                "name":"Fallacies of Weak Induction",
+                "description":"",
+                "fallacies":[
+                    {
+                        "name":"",
+                        "description": "",
+                        "example": ""
+                    }
+                ]
+            },
+            "fallaciesOfAmbiguity":{
+                "name":"",
+                "description":"",
+                "fallacies":[
+                    {
+                        "name":"",
+                        "description": "",
+                        "example": ""
+                    }
+                ]
+            },
+            "fallaciesOfGrammaticalAnalogy":{
+                "name":"",
+                "description":"",
+                "fallacies":[
+                    {
+                        "name":"",
+                        "description": "",
+                        "example": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

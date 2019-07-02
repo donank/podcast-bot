@@ -1,0 +1,36 @@
+{
+    "larguments" : [
+        {
+            "argument":"Old man Brown claims that he saw a flying saucer in his farm, but he never got beyond the fourth grade in school and can hardly read or write. He is completely ignorant of what scientists have written on the subject, so his report cannot possibly be true.",
+            "opt1":"Appeal to Force",
+            "opt2":"ad Hominem",
+            "opt3":"Accident",
+            "opt4":"Straw Man",
+            "sol":2
+        },
+        {
+            "argument":"Pro-choice is absurd. How could anyone support killing an innocent human being?",
+            "opt1":"Straw Man",
+            "opt2":"Appeal to People",
+            "opt3":"ad Hominem",
+            "opt4":"Missing the Point",
+            "sol":2
+        },
+        {
+            "argument":"Egalitarianism is wrong because it is the same as communism.",
+            "opt1":"Missing the Point",
+            "opt2":"Accident",
+            "opt3":"Appeal to Force",
+            "opt4":"Straw Man",
+            "sol":1
+        },
+        {
+            "argument":"Socrates' arguments about human excellence are rubbish. What could a man as ugly as he know about human excellence.",
+            "opt1":"Appeal to People",
+            "opt2":"ad Hominem",
+            "opt3":"Appeal to Force",
+            "opt4":"Missing the Point",
+            "sol":2
+        }
+    ]
+}

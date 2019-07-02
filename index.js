@@ -5,7 +5,9 @@ const {
     token,
 } = require('./config.json');
 
-const { podcasts } = require('./podcasts.json')
+const { podcasts } = require('./podcasts.json');
+const { larguments } = require('./logic.json');
+const { fallacies } = require('./fallacies.json');
 
 const ytdl = require('ytdl-core');
 
@@ -29,6 +31,9 @@ var topicFlag = false
 var topicSelected = 0
 var choice = 1
 var topic
+var sol = 0;
+var quizStarted = false;
+
 client.on('message', message => {
     console.log("triggered")
     if (!message.guild) return;
@@ -50,7 +55,6 @@ client.on('message', message => {
     if (message.content === `${prefix}list`) {
         console.log("list command triggered")
 
-        var podMap = [];
         var podMap = podcasts.map((element, index) => (
             {
                 name: (index + 1) + ". " + element.name,
@@ -79,7 +83,6 @@ client.on('message', message => {
         if (listFlag == true) {
             if (command > 0 && command <= podcasts.length + 1) {
 
-                var topicMap = [];
                 var topicMap = podcasts[command - 1].podcasts.map((element, index) => (
                     {
                         name: (index + 1) + ". " + element.name,
@@ -141,10 +144,61 @@ client.on('message', message => {
 
         }
     }
+
+    var starLogicQuizCommand = `${prefix}logicstart`;
+    if (message.content.startsWith(starLogicQuizCommand)){
+        console.log("logic quiz triggered")
+        quizStarted = true
+        channelId = message.channelId
+        selectQuestion(message);
+    }
+    if(message.content.startsWith("1") || message.content.startsWith("2") || message.content.startsWith("3") || message.content.startsWith("4")){
+        console.log("answer triggered")
+        if(quizStarted){
+                if(parseInt(message.content) == sol){
+                    message.channel.send("Correct Answer")
+                    selectQuestion(message);
+                }else{
+                    message.channel.send("Wrong Answer")
+                    selectQuestion(message);
+                }
+            }  
+    }
+
+    var stopLogicQuizCommand = `${prefix}logicstop`;
+    if(message.content.startsWith(stopLogicQuizCommand)){
+        quizStarted = false
+        message.channel.send("Quiz Over")
+    }
+    
 });
-
-
-
+var rand = 0
+var prevRand = 0
+function selectQuestion(message){
+        shuffle();
+        console.log("rand: " + rand);
+        sol = larguments[rand].sol;
+        console.log('sol:' + sol)
+        const quizEmbed = {
+            color: 0x8700a2,
+            title: larguments[rand].argument,
+            description: `
+            1. ${larguments[rand].opt1}
+            2. ${larguments[rand].opt2}
+            3. ${larguments[rand].opt3}
+            4. ${larguments[rand].opt4}
+        `,
+        };
+        message.channel.send({ embed: quizEmbed });
+}
+shuffle = () =>{
+    prevRand = rand
+    rand =  Math.floor(Math.random() * Math.floor(larguments.length));
+    if(rand == prevRand){
+        console.log("Same Question! Reshuffling")
+        shuffle()
+    }
+}
 client.login(token);
 
 
