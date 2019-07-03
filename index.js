@@ -177,34 +177,29 @@ client.on('message', message => {
         }
     }
 
-    var fallacyCommand = `${prefix}fallacytypes`
-    if (message.content.startsWith(fallacyCommand)) {
-        console.log("fallacy types command triggered");
-        var fallaciesEmbed = {
-            color: 0x8700a2,
-            title: "Fallacy Types",
-            description: fallacies.map(f => parseInt(f.index) + f.name).join('\n')
-        }
-        message.channel.send({ embed: fallaciesEmbed })
-
-    }
-
     var fallaciesCommand = `${prefix}fallacies`
     if(message.content.startsWith(fallaciesCommand)) {
         console.log("fallacies command triggered")
         var fallaciesMap
         var i = 0
         while(i < fallacies.length){
-            fallaciesMap = fallaciesMap + fallacies[i].fallacies.map((f, index) => "- " + f.name).join(`\n\n`)
+            fallaciesMap = fallaciesMap + "**" + fallacies[i].name + "**\n" + fallacies[i].fallacies.map((f, index) => (i+1).toString() + "." + (index+1).toString() +": " + f.name).join('\n') + "\n\n"
             i = i + 1
         }
-        console.log(fallaciesMap)
+
+        fallaciesMap = fallaciesMap.replace("undefined", "")
         var fallaciesEmbed = {
-            color: 0x8700a2,
-            title: "Fallacies",
+            color: 0xA7CEE4,
+            title: "Different Types of Fallacies",
             description: fallaciesMap
         }
         message.channel.send({ embed: fallaciesEmbed })
+    }
+
+    var fallacyCommand = `${prefix}fallacy`
+    if(message.content.startsWith(fallacyCommand)) {
+        console.log("fallacy command triggered")
+
     }
 
 });
@@ -216,10 +211,10 @@ function selectQuestion(message) {
     sol = larguments[rand].sol;
     console.log('sol:' + sol)
     const quizEmbed = {
-        color: 0x8700a2,
+        color: 0xA7CEE4,
         title: larguments[rand].argument,
         description: `
-            *Choose*
+            *Select your answer*
             1. ${larguments[rand].opt1}
             2. ${larguments[rand].opt2}
             3. ${larguments[rand].opt3}
