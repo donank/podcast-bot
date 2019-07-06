@@ -167,6 +167,7 @@ client.on('message', message => {
                 description: descriptionText
             }
             message.channel.send({ embed: stopEmbed })
+            scores = []
         }
     }
 
@@ -187,18 +188,12 @@ client.on('message', message => {
                 })
             }
             if (parseInt(message.content) == sol) {
-                //message.channel.send("Correct Answer")
                 scores.forEach(s => {
                     if (s.name == message.member.displayName.toString()) {
                         s.score = s.score + 1
                     }
                 })
-                console.log(scores)
-                //selectQuestion(message);
-            } /*else {
-                message.channel.send("Wrong Answer")
-                //selectQuestion(message);
-            }*/
+            }
         }
     }
 
@@ -287,14 +282,16 @@ async function selectQuestion(message) {
         message.channel.send({ embed: quizEmbed });
         await timer(30000)
         message.channel.send()
-        var descriptionText = "`Answer`: "+"**"+ sol +"** \n 💠 Scores 💠 \n\n" + scores.map((s, i) => "" + " `" + s.name + "` **→** **" + s.score + "**\n")
+        var descriptionText = "`Answer`: "+"**"+ sol +"** \n\n 💠 Scores 💠 \n\n" + scores.map((s, i) => "" + " `" + s.name + "` **→** **" + s.score + "**\n")
         descriptionText = descriptionText.replace(",", "")
         var nextEmbed = {
             color: 0xA7CEE4,
             title: "Status",
             description: descriptionText
         }
-        message.channel.send({ embed: nextEmbed })
+        if(quizStarted){
+            message.channel.send({ embed: nextEmbed })
+        }
     }
 }
 
