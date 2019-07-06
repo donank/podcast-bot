@@ -265,6 +265,7 @@ async function selectQuestion(message) {
         console.log("rand: " + rand);
         sol = larguments[rand].sol;
         console.log('sol:' + sol)
+        var timerValue = countWords(larguments[rand].argument)
         const quizEmbed = {
             color: 0xA7CEE4,
             title: "`Argument`",
@@ -277,10 +278,13 @@ async function selectQuestion(message) {
             2. ${larguments[rand].opt2}
             3. ${larguments[rand].opt3}
             4. ${larguments[rand].opt4}
+
+        \`Wait Time : ${timerValue} seconds\`
         `,
         };
+        
         message.channel.send({ embed: quizEmbed });
-        await timer(30000)
+        await timer(timerValue*1000)
         message.channel.send()
         var descriptionText = "`Answer`: "+"**"+ sol +"** \n\n 💠 Scores 💠 \n\n" + scores.map((s, i) => "" + " `" + s.name + "` **→** **" + s.score + "**\n")
         descriptionText = descriptionText.replace(",", "")
@@ -293,6 +297,10 @@ async function selectQuestion(message) {
             message.channel.send({ embed: nextEmbed })
         }
     }
+}
+
+countWords = (str) => {
+    return str.trim().split(/\s+/).length
 }
 
 timer = (ms) => {
