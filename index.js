@@ -29,8 +29,6 @@ client.once('disconnect', () => {
 var listFlag = false
 var topicFlag = false
 var topicSelected = 0
-var choice = 1
-var topic
 var sol = 0;
 var quizStarted = false;
 var scores = []
@@ -145,6 +143,8 @@ client.on('message', message => {
         }
     }
 
+    /* Critical thinking and logical reasoning Quiz*/
+
     var starLogicQuizCommand = `${prefix}logix`;
     var channel
     if (message.content.startsWith(starLogicQuizCommand)) {
@@ -155,35 +155,60 @@ client.on('message', message => {
         if (command == "start") {
             channel = message.channelId
             quizStarted = true
-            selectQuestion(message);
+            selectQuestion(message)
         }
         if (command == "stop" && channel == message.channelId) {
             quizStarted = false
-            message.channel.send("Quiz Over")
+            var descriptionText = "💠 Scores 💠 \n\n" + scores.map((s, i) => "" + " `" + s.name + "` **→** **" + s.score + "**\n")
+            descriptionText = descriptionText.replace(",", "")
+            var stopEmbed = {
+                color: 0xA7CEE4,
+                title: "Trivia Over",
+                description: descriptionText
+            }
+            message.channel.send({ embed: stopEmbed })
         }
     }
 
     if (message.content.startsWith("1") || message.content.startsWith("2") || message.content.startsWith("3") || message.content.startsWith("4")) {
         console.log("answer triggered")
-
+        var userExists = false
         if (quizStarted && channel == message.channelId) {
-            if (parseInt(message.content) == sol) {
-                message.channel.send("Correct Answer")
-                selectQuestion(message);
-            } else {
-                message.channel.send("Wrong Answer")
-                selectQuestion(message);
+            scores.forEach(s => {
+                if (s.name == message.member.displayName.toString()) {
+                    userExists = true
+                }
+            })
+            console.log("userExists: " + userExists)
+            if (!userExists) {
+                scores.push({
+                    name: message.member.displayName.toString(),
+                    score: 0
+                })
             }
+            if (parseInt(message.content) == sol) {
+                //message.channel.send("Correct Answer")
+                scores.forEach(s => {
+                    if (s.name == message.member.displayName.toString()) {
+                        s.score = s.score + 1
+                    }
+                })
+                console.log(scores)
+                //selectQuestion(message);
+            } /*else {
+                message.channel.send("Wrong Answer")
+                //selectQuestion(message);
+            }*/
         }
     }
 
     var fallaciesCommand = `${prefix}fallacies`
-    if(message.content.startsWith(fallaciesCommand)) {
+    if (message.content.startsWith(fallaciesCommand)) {
         console.log("fallacies command triggered")
         var fallaciesMap
         var i = 0
-        while(i < fallacies.length){
-            fallaciesMap = fallaciesMap + "**" + fallacies[i].name + "**\n" + fallacies[i].fallacies.map((f, index) => (i+1).toString() + "." + (index+1).toString() +": " + f.name).join('\n') + "\n\n"
+        while (i < fallacies.length) {
+            fallaciesMap = fallaciesMap + "**" + fallacies[i].name + "**\n" + fallacies[i].fallacies.map((f, index) => (i + 1).toString() + "." + (index + 1).toString() + ": " + f.name).join('\n') + "\n\n"
             i = i + 1
         }
 
@@ -197,31 +222,84 @@ client.on('message', message => {
     }
 
     var fallacyCommand = `${prefix}fallacy`
-    if(message.content.startsWith(fallacyCommand)) {
+    if (message.content.startsWith(fallacyCommand)) {
         console.log("fallacy command triggered")
+        const args = message.content.slice(fallacyCommand.length).split();
+        const command = args.shift().trim();
+        console.log(command);
+        var splitCommand = command.split(".")
+        console.log(fallacies[splitCommand[0] - 1].fallacies[splitCommand[1] - 1].name)
+        var fallacyEmbed = {
+            color: 0xA7CEE4,
+            title: fallacies[splitCommand[0] - 1].fallacies[splitCommand[1] - 1].name,
+            description: `
+                **Description:** ${fallacies[splitCommand[0] - 1].fallacies[splitCommand[1] - 1].description} 
+                
+                **Example:** *${fallacies[splitCommand[0] - 1].fallacies[splitCommand[1] - 1].example}*
+            `
+        }
 
+        message.channel.send({ embed: fallacyEmbed })
+    }
+
+    var helpCommand = `${prefix}help`
+    if (message.content.startsWith(helpCommand)) {
+        console.log("help command triggered")
+        var helpEmbed = {
+            color: 0xA7CEE4,
+            title: "Commands",
+            description: `
+                **Trivia Start** : -logix start
+                **Trivia Stop** : -logix stop
+                **List all fallacies** : -fallacies
+                **Selected Fallacy description** : -fallacy <base type number.fallacy number>
+                for ex: -fallacy 1.1
+            `
+        }
+
+        message.channel.send({ embed: helpEmbed })
     }
 
 });
 var rand = 0
 var prevRand = 0
-function selectQuestion(message) {
-    shuffle();
-    console.log("rand: " + rand);
-    sol = larguments[rand].sol;
-    console.log('sol:' + sol)
-    const quizEmbed = {
-        color: 0xA7CEE4,
-        title: larguments[rand].argument,
-        description: `
+var timeup = false
+async function selectQuestion(message) {
+    while (quizStarted) {
+        shuffle();
+        console.log("rand: " + rand);
+        sol = larguments[rand].sol;
+        console.log('sol:' + sol)
+        const quizEmbed = {
+            color: 0xA7CEE4,
+            title: "`Argument`",
+            description: `
+
+        **${larguments[rand].argument}**
+
             *Select your answer*
             1. ${larguments[rand].opt1}
             2. ${larguments[rand].opt2}
             3. ${larguments[rand].opt3}
             4. ${larguments[rand].opt4}
         `,
-    };
-    message.channel.send({ embed: quizEmbed });
+        };
+        message.channel.send({ embed: quizEmbed });
+        await timer(30000)
+        message.channel.send()
+        var descriptionText = "`Answer`: "+"**"+ sol +"** \n 💠 Scores 💠 \n\n" + scores.map((s, i) => "" + " `" + s.name + "` **→** **" + s.score + "**\n")
+        descriptionText = descriptionText.replace(",", "")
+        var nextEmbed = {
+            color: 0xA7CEE4,
+            title: "Status",
+            description: descriptionText
+        }
+        message.channel.send({ embed: nextEmbed })
+    }
+}
+
+timer = (ms) => {
+    return new Promise(res => setTimeout(res, ms))
 }
 shuffle = () => {
     prevRand = rand
