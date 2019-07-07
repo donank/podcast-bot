@@ -33,7 +33,6 @@ var sol = 0;
 var quizStarted = false;
 var scores = []
 client.on('message', message => {
-    console.log("triggered")
     if (!message.guild) return;
     if (message.content === `${prefix}ping`) {
         message.channel.send('pong');
