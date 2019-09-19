@@ -9,7 +9,6 @@ const { podcasts } = require('./podcasts.json');
 const { larguments } = require('./logic.json');
 const { fallacies } = require('./fallacies.json');
 
-const ytdl = require('ytdl-core');
 
 const client = new Discord.Client();
 const queue = new Map();

@@ -23,8 +23,5 @@
   "homepage": "https://github.com/donank/podcast-bot#readme",
   "dependencies": {
     "discord.js": "^11.5.0",
-    "ffmpeg-binaries": "^4.0.0",
-    "opusscript": "0.0.6",
-    "ytdl-core": "^0.29.1"
   }
 }
