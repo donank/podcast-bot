@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/donank/podcast-bot#readme",
   "dependencies": {
-    "discord.js": "^11.5.0",
+    "discord.js": "^11.5.0"
   }
 }
