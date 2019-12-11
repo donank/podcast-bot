@@ -88,3 +88,6 @@ typings/
 
 #config file
 config.json
+
+#pdf files
+pdfs/
