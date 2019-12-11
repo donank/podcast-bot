@@ -253,6 +253,21 @@ client.on('message', message => {
         message.channel.send({ embed: helpEmbed })
     }
 
+    if(message.author.id == 219044642354626562){
+        let msg = message.toString().split("")
+        var msg1 = ""
+
+        msg.forEach((char, index) => {
+            if(index % 2 == 0){
+                char = char.toUpperCase();
+            }
+            console.log(char)
+            msg1 += char
+        })
+        console.log(msg1)
+        message.channel.send(msg1)
+    }
+
 });
 var rand = 0
 var prevRand = 0
