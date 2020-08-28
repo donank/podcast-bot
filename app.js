@@ -63,59 +63,75 @@ client.on('message', message => {
         listFlag = true;
 
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        console.log(collector);
         collector.on('collect', msg => {
             if (!isNaN(msg)) {
                 choice = msg;
                 message.channel.send(`You have selected \`${choice} . ${books[choice - 1].name} by ${books[choice - 1].author}\`.`);
-                readBook(choice, message, 1);
+                collector.stop();
+                message.channel.send("Enter page number!");
+                const collector2 = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+                collector2.on('collect', m => {
+                    if (!isNaN(m)) {
+                        readBook(choice, message, m);
+                    }
+                })
             }
         })
     }
 
     var readBook = function (choice, message, count) {
-        console.log("readBook called");
-        message.channel.send("Press 'n' to read text!")
-
+        console.log("readBook called " + count);
+        message.channel.send("\`Press 'n' to read current/next page | 'p' for previous page\`")
+        var pageText = ""
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id);
         collector.on('collect', msg => {
             if (msg = 'n') {
-                console.log("n pressed")
+                console.log("n pressed " + count)
                 var loadingTask = pdfjs.getDocument(books[choice - 1].pdf_url);
-                loadingTask.promise.then(function (pdf) {
-                    var maxPages = pdf.numPages;
-                    console.log(maxPages);
-                    var page = pdf.getPage(count);
-                    var txt = ""
-                    page.then(function (page) {
-                        var textContent = page.getTextContent();
-                        textContent.then(function (text) {
-                            text.items.map(function (s) {
-                                message.channel.send(s.str)
-                            })
-                        })
-                    })
-                });
-                readBook(choice, message, count + 1)
-            } else {
 
+                loadingTask.promise.then((pdf) => {
+                    var maxPages = pdf.numPages;
+                    var page = pdf.getPage(count);
+                    page.then((page) => {
+                        var textContent = page.getTextContent();
+                        textContent.then((text) => {
+                            pageText = text.items.map(s => s.str).join('')
+                            var splitPage1 = pageText.substring(0, (pageText.length) / 2)
+                            var splitPage2 = pageText.substring((pageText.length) / 2, pageText.length)
+                            message.channel.send(splitPage1)
+                            message.channel.send(splitPage2)
+
+                        }, reason => {
+                            console.error(reason);
+                        })
+                    }, reason => {
+                        console.error(reason);
+                    });
+                }, reason => {
+                    console.error(reason);
+                });
+
+                collector.stop();
+                readBook(choice, message, parseInt(count) + 1)
+            } else if (msg = 'p' && count > 1) {
+                console.log("p pressed " + count)
+                readBook(choice, message, parseInt(count) - 1)
             }
         })
     }
 
-    function postText(pdf, message) {
-        console.log("postText called")
-
-
-    }
-
     var addCommand = `${prefix}add`
     if (message.content.startsWith(addCommand)) {
-        const args = message.content.slice(addCommand.length).split();
-        const command = args.shift().trim();
-        console.log(command);
-
-        var splitCommand = command.split(".")
+        message.channel.send("Enter the name of the book").then(() => {
+            message.channel.awaitMessages(filter, { max})
+        })
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id);
+        collector.on('collect', m => {
+            collector.stop();
+        })
+        collector.on('end', collected => {
+            console.log("collector stopped")
+        })
 
 
     }
@@ -128,5 +144,9 @@ client.on('message', message => {
 
         var splitCommand = command.split(".")
     }
+
+    /*if (message){
+        console.log(`${message.createdAt} \: ${message.channel.name} \: [${message.channel.id}] \: ${message.author.username} \: ${message.content} `)
+    }*/
 });
 client.login(token);
