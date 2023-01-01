@@ -23,6 +23,6 @@
   "homepage": "https://github.com/donank/podcast-bot#readme",
   "dependencies": {
     "discord.js": "^11.5.0",
-    "pdfjs-dist": "^2.2.228"
+    "pdfjs-dist": "^2.16.105"
   }
 }
